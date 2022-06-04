@@ -39,13 +39,13 @@ function App() {
 
   const removeBooks = useCallback(() => {
     setBooks([]);
-  },[setBooks]);
+  }, [setBooks]);
 
   return (
-    <div className="flex flex-col items-center my-8">
+    <div className="flex flex-col items-center my-8 ">
       {openModal && <AddBookForm addBook={addBook} />}
 
-      <div className="flex overflow-x-auto w-80 gap-x-4">
+      <div className="flex overflow-x-auto w-80 gap-x-4 justify-center">
         {books.map((book) => (
           <Book
             key={book.id}
@@ -65,7 +65,7 @@ function App() {
         onClick={clickOpenModal}
         className="bg-dark-green text-white rounded-sm py-1 px-8 my-2"
       >
-        Изменение библиотеки
+        Пополнить библиотеку
       </button>
     </div>
   );
