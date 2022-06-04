@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders remove books button", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const buttonElement = screen.getByText(/удалить все книги/i);
+  expect(buttonElement).toBeInTheDocument();
+});
+
+test("renders add books button", () => {
+  render(<App />);
+  const buttonElement = screen.getByText(/пополнить библиотеку/i);
+  expect(buttonElement).toBeInTheDocument();
 });
